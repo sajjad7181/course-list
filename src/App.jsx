@@ -27,7 +27,8 @@ const courses = [
   {
     id: 3,
     title: 'Business Lecture',
-    description: 'Lectures on how to build your business safely without fear of new projects',
+    description:
+      'Lectures on how to build your business safely without fear of new projects',
     imageUrl: '/images/img3.jpg',
     rate: '3.9',
     tags: ['Marketing', 'Finance'],
@@ -47,4 +48,3 @@ function App() {
 }
 
 export default App;
-
