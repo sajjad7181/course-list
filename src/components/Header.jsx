@@ -1,13 +1,14 @@
-
-const courseStatus = ["All", "Active", "Completed", "Upcoming"];
+const courseStatus = ['All', 'Completed', 'Upcoming', 'Active'];
 
 function Header() {
   return (
     <div>
-      <h1>My Courses (3)</h1>
+      <h1>Course List</h1>
       <div className="course-status">
-        {courseStatus.map((s) => (
-          <div key={s}>{s}</div>
+        {courseStatus.map((s, index) => (
+          <div className={index === 0 ? 'active' : ''} key={s}>
+            {s}
+          </div>
         ))}
       </div>
     </div>

@@ -1,35 +1,10 @@
-function Footer() {
-  const isPassed = true;
-
-  // ❌ BAD WAY : ❌
-
-  // if (!isPassed)
-  //   return (
-  //     <div className="footer">
-  //       <p>Course Result:</p>
-  //       <p>You have not passed any course</p>
-  //     </div>
-  //   );
-
-  // return (
-  //   <div className="footer">
-  //     <p>Course Result:</p>
-  //     <p>
-  //       You have successfully passed <strong>33%</strong> of your courses.
-  //     </p>
-  //   </div>
-  // );
+function Footer({ courses }) {
+  const completed = courses.filter((c) => c.status === 'Completed').length;
+  const percentage = Math.round((completed / courses.length) * 100);
 
   return (
-    <div className="footer">
-      <p>Course Result:</p>
-      {isPassed ? (
-        <p>
-          You have successfully passed <strong>33%</strong> of your courses.
-        </p>
-      ) : (
-        <p>You have not passed any course</p>
-      )}
+    <div>
+      You have passed <strong>{percentage}%</strong> of your courses.
     </div>
   );
 }

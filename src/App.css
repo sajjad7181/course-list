@@ -94,3 +94,25 @@ h1 {
 .course-item__footer .caption .badge {
   font-weight: bold;
 }
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge--primary {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.badge--secondary {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.badge--danger {
+  background-color: #f97316;
+  color: #fff;
+}
